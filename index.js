@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
-const GEMINI_API_KEY = "AIzaSyAeHRxZYhe9XFTLmstl4lCrKD7Y5YNSxRg";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 app.post("/webhook", async (req, res) => {
   try {
